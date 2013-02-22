@@ -3,9 +3,9 @@ package vidovic;
 import java.util.Random;
 
 public class Bot {
-	public static int r=0;
-	public static int s=0;
-	public static int p=0;
+	public static int r=1;
+	public static int s=1;
+	public static int p=1;
 	
 	public String calculateTurn()
 	{
@@ -13,25 +13,12 @@ public class Bot {
 		int sum=r+s+p;
 		Random rnd=new Random();
 		int num=rnd.nextInt(sum);
-		if(num>10)
-		{
-			if(num<=r)
-				turn="r";
-			if(num>r && num<=r+s)
-				turn="s";
-			if(num>r+s)
-				turn="p";
-		}
-		else
-		{
-			int num2=rnd.nextInt(100);
-			if(num2<=33)
-				turn="r";
-			if(num2<=67)
-				turn="s";
-			if(num2<=100)
-				turn="p";
-		}
+		if(num<=r)
+			turn="p";
+		if(num>r && num<=r+s)
+			turn="r";
+		if(num>r+s)
+			turn="s";
 		return turn;
 	}
 	
