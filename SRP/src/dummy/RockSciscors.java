@@ -9,10 +9,12 @@ public class RockSciscors {
 	{
 		if(i<=count)
 		{
+			i++;
 			return "r";
 		}
 		else
 		{
+			i++;
 			if(i==count*2)
 				i=0;
 			return "s";
