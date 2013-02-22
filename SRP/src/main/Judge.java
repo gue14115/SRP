@@ -1,18 +1,23 @@
 package main;
+import anil.RandomBot;
 import vidovic.*;
 public class Judge {
 
-	int a1=0;
-	int a2=0;
+	static int a1=0;
+	static int a2=0;
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		RandomBot r1=new RandomBot();
+		RandomBot r2=new RandomBot();
+		for(int i=0;i<1000;i++)
+		judge(r1.calculateTurn(),r2.calculateTurn());
+		System.out.println(a1+" to "+a2);
 	}
 
-	public void judge(String p1, String p2)
+	public static void judge(String p1, String p2)
 	{
 		String result="Draw";
 		switch(p1)
