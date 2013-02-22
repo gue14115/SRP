@@ -14,7 +14,7 @@ public class Judge {
 		RandomBot r2=new RandomBot();
 		for(int i=0;i<1000;i++)
 		judge(r1.calculateTurn(),r2.calculateTurn());
-		System.out.println(a1+" to "+a2);
+		System.out.println("RandomBot "a1+" to "+a2+" RandomBot");
 	}
 
 	public static void judge(String p1, String p2)
