@@ -18,6 +18,7 @@ public class Judge {
 		
 		dummy.Rock rock=new dummy.Rock();
 		dummy.RockSciscors rockSciscors=new dummy.RockSciscors();
+		dummy.RockSciscorsPaper rsp=new dummy.RockSciscorsPaper();
 		
 		for(int i=0;i<1000;i++)
 			judge(r1.calculateTurn(),r2.calculateTurn());
@@ -28,13 +29,13 @@ public class Judge {
 		for(int i=0; i<1000; i++)
 		{
 			String p1=vB1.calculateTurn();
-			String p2=rockSciscors.calculateTurn();
+			String p2=rsp.calculateTurn();
 			if(i<2)
 				System.out.println(p1);
 			judge(p1, p2);
 			vB1.statistics(p2);
 		}
-		System.out.println("vidovic.Bot1 "+a1+" to "+a2+" RockSciscors");
+		System.out.println("vidovic.Bot1 "+a1+" to "+a2+" RockSciscorsPaper");
 	}
 
 	public static void judge(String p1, String p2)
