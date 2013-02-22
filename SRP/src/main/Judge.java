@@ -12,19 +12,17 @@ public class Judge {
 
 	public void judge(String p1, String p2)
 	{
+		String result="Draw";
 		switch(p1)
 		{
 		case "s":
 			switch(p2)
 			{
-			case "s":
-				System.out.println("Draw");
-				break;
 			case "r":
-				System.out.println("P2 Wins");
+				result=("P2 Wins");
 				break;
 			case "p":
-				System.out.println("P1 Wins");
+				result=("P1 Wins");
 				break;
 			}
 			break;
@@ -32,13 +30,10 @@ public class Judge {
 			switch(p2)
 			{
 			case "s":
-				System.out.println("P1 Wins");
-				break;
-			case "r":
-				System.out.println("Draw");
+				result=("P1 Wins");
 				break;
 			case "p":
-				System.out.println("P2 Wins");
+				result=("P2 Wins");
 				break;
 			}
 			break;
@@ -46,16 +41,14 @@ public class Judge {
 			switch(p2)
 			{
 			case "s":
-				System.out.println("P2 Wins");
+				result=("P2 Wins");
 				break;
 			case "r":
-				System.out.println("P1 Wins");
-				break;
-			case "p":
-				System.out.println("Draw");
+				result=("P1 Wins");
 				break;
 			}
 			break;
 		}
+		System.out.println(result);
 	}
 }
