@@ -17,7 +17,7 @@ public class Bot {
 			turn="p";
 		if(num>r && num<=r+s)
 			turn="r";
-		if(num>r+s)
+		if(num>=r+s)
 			turn="s";
 		return turn;
 	}

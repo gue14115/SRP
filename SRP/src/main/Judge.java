@@ -12,9 +12,29 @@ public class Judge {
 		// TODO Auto-generated method stub
 		RandomBot r1=new RandomBot();
 		RandomBot r2=new RandomBot();
+		
+		vidovic.Bot vB1=new vidovic.Bot();
+		vidovic.Bot vB2=new vidovic.Bot();
+		
+		dummy.Rock rock=new dummy.Rock();
+		dummy.RockSciscors rockSciscors=new dummy.RockSciscors();
+		
 		for(int i=0;i<1000;i++)
-		judge(r1.calculateTurn(),r2.calculateTurn());
+			judge(r1.calculateTurn(),r2.calculateTurn());
 		System.out.println("RandomBot "+a1+" to "+a2+" RandomBot");
+		
+		a1=0; a2=0;
+		
+		for(int i=0; i<1000; i++)
+		{
+			String p1=vB1.calculateTurn();
+			String p2=rockSciscors.calculateTurn();
+			if(i<2)
+				System.out.println(p1);
+			judge(p1, p2);
+			vB1.statistics(p2);
+		}
+		System.out.println("vidovic.Bot1 "+a1+" to "+a2+" RockSciscors");
 	}
 
 	public static void judge(String p1, String p2)
@@ -62,6 +82,6 @@ public class Judge {
 			}
 			break;
 		}
-		System.out.println(result);
+		//System.out.println(result);
 	}
 }
