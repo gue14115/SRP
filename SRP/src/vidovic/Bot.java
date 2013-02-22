@@ -3,9 +3,9 @@ package vidovic;
 import java.util.Random;
 
 public class Bot {
-	public static int r=1;
-	public static int s=1;
-	public static int p=1;
+	private int r=1;
+	private int s=1;
+	private int p=1;
 	
 	public String calculateTurn()
 	{
