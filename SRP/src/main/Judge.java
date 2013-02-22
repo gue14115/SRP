@@ -2,6 +2,8 @@ package main;
 import vidovic.*;
 public class Judge {
 
+	int a1=0;
+	int a2=0;
 	/**
 	 * @param args
 	 */
@@ -20,9 +22,11 @@ public class Judge {
 			{
 			case "r":
 				result=("P2 Wins");
+				a2++;
 				break;
 			case "p":
 				result=("P1 Wins");
+				a1++;
 				break;
 			}
 			break;
@@ -31,9 +35,11 @@ public class Judge {
 			{
 			case "s":
 				result=("P1 Wins");
+				a1++;
 				break;
 			case "p":
 				result=("P2 Wins");
+				a2++;
 				break;
 			}
 			break;
@@ -42,9 +48,11 @@ public class Judge {
 			{
 			case "s":
 				result=("P2 Wins");
+				a2++;
 				break;
 			case "r":
 				result=("P1 Wins");
+				a1++;
 				break;
 			}
 			break;
